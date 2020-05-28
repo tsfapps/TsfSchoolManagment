@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FragResult">
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/pbReportResult"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvResult"
+        tools:listitem="@layout/frag_result_item"
+        android:layout_above="@+id/llBottomGrade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/llBottomGrade"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_60dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/tv_result_grade"
+
+                android:text="Grade"/>
+            <TextView
+                style="@style/tv_result_grade"
+
+                android:text="Marks"/>
+        </LinearLayout>
+        <View style="@style/view_grade_marks" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/tv_result_grade"
+                android:text="AA"/>
+            <TextView
+                style="@style/tv_result_marks"
+                android:text="90-100%"/>
+        </LinearLayout>
+        <View style="@style/view_grade_marks" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/tv_result_grade"
+                android:text="A+"/>
+            <TextView
+                style="@style/tv_result_marks"
+
+                android:text="80-89%"/>
+        </LinearLayout>
+        <View style="@style/view_grade_marks" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/tv_result_grade"
+
+                android:text="A"/>
+            <TextView
+                style="@style/tv_result_marks"
+
+                android:text="60-79%"/>
+        </LinearLayout>
+        <View style="@style/view_grade_marks" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/tv_result_grade"
+
+                android:text="B"/>
+            <TextView
+                style="@style/tv_result_marks"
+
+                android:text="45-69%"/>
+        </LinearLayout>
+        <View style="@style/view_grade_marks" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/tv_result_grade"
+                android:text="C"/>
+            <TextView
+                style="@style/tv_result_marks"
+
+                android:text="30-44%"/>
+        </LinearLayout>
+        <View style="@style/view_grade_marks" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+               style="@style/tv_result_grade"
+                android:text="D"/>
+            <TextView
+                style="@style/tv_result_marks"
+                android:text="0-29%"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

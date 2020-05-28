@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+            <RelativeLayout
+                android:layout_marginEnd="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/tvToolbar"
+                    android:text="@string/app_name"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/iv_logout"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:background="@color/grey"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/ll_bottom_menu"
+        android:id="@+id/container_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_menu"
+        android:gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            style="@style/ll_dash_bottom">
+            <ImageView
+                android:id="@+id/iv_bottom_dashboard"
+                android:src="@drawable/ic_bottom_dashboard"
+                style="@style/iv_dash_bottom"/>
+            <TextView
+                android:text="Home"
+                style="@style/tv_dash_bottom"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/ll_dash_bottom">
+            <ImageView
+                android:id="@+id/iv_bottom_result"
+                android:src="@drawable/ic_bottom_report"
+                style="@style/iv_dash_bottom"/>
+            <TextView
+                android:text="Result"
+                style="@style/tv_dash_bottom"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/ll_dash_bottom">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_bottom_fees"
+                android:src="@drawable/ic_fees"
+                style="@style/iv_dash_bottom"/>
+            <TextView
+                android:text="Fees"
+                style="@style/tv_dash_bottom"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/ll_dash_bottom">
+            <ImageView
+                android:id="@+id/iv_bottom_profile"
+                android:src="@drawable/ic_main_profile"
+                style="@style/iv_dash_bottom"/>
+            <TextView
+                android:text="Profile"
+                style="@style/tv_dash_bottom"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

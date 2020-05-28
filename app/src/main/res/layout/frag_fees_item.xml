@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="fees"
+            type="com.appslelo.eduwiseschoolmanagment.model.ModelFees" />
+    </data>
+<androidx.cardview.widget.CardView
+    android:background="@drawable/bg_tv"
+    android:id="@+id/ll_route_item"
+    android:gravity="center_vertical"
+    android:elevation="22dp"
+    app:cardCornerRadius="4dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    >
+    <RelativeLayout
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/tvFeesMonth"
+            android:textSize="@dimen/dimen_16sp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{fees.academicSession}"/>
+        <LinearLayout
+            android:id="@+id/llFeesBillNo"
+            android:orientation="vertical"
+            android:layout_width="@dimen/dimen_60dp"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_btn_main">
+            <TextView
+                android:layout_width="match_parent"
+                android:height="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/dimen_10sp"
+                android:text="Bill No."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/tvBillNo"
+                android:height="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/dimen_10sp"
+                android:text="@{fees.billNo}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/llFeesBillNo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/tvFeesAmountLabel"
+                android:textSize="@dimen/dimen_14sp"
+                android:textColor="@color/color_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount Paid: ₹"/>
+            <TextView
+                android:layout_toEndOf="@+id/tvFeesAmountLabel"
+                android:gravity="center_vertical"
+                android:id="@+id/tvFeesAmount"
+                android:textSize="@dimen/dimen_14sp"
+                android:textColor="@color/color_btn"
+                android:layout_width="match_parent"
+                android:textAllCaps="true"
+                android:layout_height="wrap_content"
+                android:text="@{fees.amountPaid}"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            <TextView
+                android:gravity="center_vertical"
+                android:textSize="@dimen/dimen_14sp"
+                android:textColor="@color/color_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment for Month: "/>
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvPaymentType"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:text="@{fees.paymentForMonth}"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvFeesDateLabel"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Date: "/>
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvFeesDate"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:text="@{fees.createdDateTime}"/>
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvAmountDueLabel"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/color_btn"
+                    android:text="Amount Due: ₹"/>
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/tvAmountDue"
+                    android:textSize="@dimen/dimen_12sp"
+                    android:textColor="@color/color_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@{fees.amountDue}"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</layout>

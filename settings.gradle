@@ -1,0 +1,2 @@
+rootProject.name='EduwiseSchoolManagment'
+include ':app'
